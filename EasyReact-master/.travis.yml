@@ -1,0 +1,13 @@
+# references:
+# * http://www.objc.io/issue-6/travis-ci.html
+# * https://github.com/supermarin/xcpretty#usage
+
+osx_image: xcode10
+language: objective-c
+cache: 
+  - bundler
+  - cocoapods
+before_install:
+  - bundle install
+script:
+  - fastlane test_and_report
